@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "expo start --clear",
-    "start": "expo start",
-    "tunnel": "expo start --tunnel --clear",
+    "dev": "cross-env RCT_METRO_PORT=8088 expo start --clear",
+    "start": "cross-env RCT_METRO_PORT=8088 expo start",
+    "tunnel": "cross-env RCT_METRO_PORT=8088 expo start --tunnel --port 8088 --clear",
     "build:web": "expo export --platform web",
     "lint": "expo lint"
   },
